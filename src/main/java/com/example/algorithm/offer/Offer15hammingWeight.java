@@ -15,16 +15,25 @@ TODO 把 9 表示成二进制是 1001，有 2 位是 1。因此，如果输入 
 public class Offer15hammingWeight {
 
     public static int hammingWeight(int n) {
-     String str = "";
+        int res = 0;
         while(n != 0){
-            str = (n & 1) + "" + str;
+            res += n & 1;
             n >>>= 1;
         }
-        System.out.println(str);
-        return 0;
+        return res;
+    }
+
+    public static void test(int number){
+        String result = "";
+        while (0 != number) {
+            result = number % 2 + result;
+            number = number / 2;
+        }
+        System.out.println(result);
     }
 
     public static void main(String[] args) {
         System.out.println(hammingWeight(9));
+        test(8);
     }
 }
