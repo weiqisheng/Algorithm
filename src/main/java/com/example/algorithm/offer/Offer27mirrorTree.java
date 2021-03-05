@@ -58,14 +58,13 @@ public class Offer27mirrorTree {
     }
 
 
-public static class TreeNode {
+}
+
+class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
     TreeNode(int x) { val = x; }
-}
-
-
 }
 
 
